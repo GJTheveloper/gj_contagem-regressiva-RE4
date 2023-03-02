@@ -1,64 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <title>RE4 Remake - Countdown</title>
-    <link rel="stylesheet" href="src/style/style.css" />
-    <link href="src/font/Pithazard.ttf" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/style/index.css" />
+    <link href="./src/font/Pithazard.ttf" rel="font/ttf" />
     <link rel="shortcut icon" href="src/img/logo.png" type="image/png" />
-    <meta
-      name="viewport"
-      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
-    />
     <meta charset="UTF-8" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta property="article:tag" content="HTML5" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="RE4 Remake - Countdown" />
   </head>
   <body>
-    <div class="countdown">
-      <div class="time">
-        <h2 id="days">00</h2>
-        <small>days</small>
+    <div class="container">
+      <div class="overlap overlap1">
+        <video autoplay muted loop id="re4_remake_video">
+          <source src="src/video/re4_remake_video.mp4" type="video/mp4" />
+        </video>
       </div>
-      <div class="time">
-        <h2 id="hours">00</h2>
-        <small>hours</small>
+      <div class="overlap overlap2">
+        <svg
+          id="svg_background"
+          xmlns="http://www.w3.org/2000/svg"
+          width="100vw"
+          height="100vh"
+        >
+          <defs>
+            <radialGradient id="rgrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" style="stop-color: rgba(0, 0, 0, 0.1)" />
+              <stop offset="60%" style="stop-color: rgba(0, 0, 0, 1)" />
+            </radialGradient>
+          </defs>
+          <ellipse
+            cx="50%"
+            cy="50%"
+            rx="100vw"
+            ry="100vh"
+            style="fill: url(#rgrad)"
+          />
+        </svg>
       </div>
-      <div class="time">
-        <h2 id="minutes">00</h2>
-        <small>minutes</small>
-      </div>
-      <div class="time">
-        <h2 id="seconds">00</h2>
-        <small>seconds</small>
+      <div class="overlap overlap3">
+        <div class="time days">
+          <h2 id="days">00</h2>
+          <p>days</p>
+        </div>
+        <div class="time hours">
+          <h2 id="hours">00</h2>
+          <p>hours</p>
+        </div>
+        <div class="time minutes">
+          <h2 id="minutes">00</h2>
+          <p>minutes</p>
+        </div>
+        <div class="time seconds">
+          <h2 id="seconds">00</h2>
+          <p>seconds</p>
+        </div>
       </div>
     </div>
-    <svg
-      id="svg_background"
-      xmlns="http://www.w3.org/2000/svg"
-      width="100vw"
-      height="100vh"
-    >
-      <defs>
-        <radialGradient id="rgrad" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" style="stop-color: rgba(0, 0, 0, 0.1)" />
-          <stop offset="60%" style="stop-color: rgba(0, 0, 0, 1)" />
-        </radialGradient>
-      </defs>
-      <ellipse
-        cx="50%"
-        cy="50%"
-        rx="100vw"
-        ry="100vh"
-        style="fill: url(#rgrad)"
-      />
-    </svg>
-
-    <video autoplay muted loop id="re4_remake_video">
-      <source src="src/video/re4_remake_video.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
-
-    <script src="src/script/script.js"></script>
+    <script src="./src/script/index.js"></script>
   </body>
 </html>
